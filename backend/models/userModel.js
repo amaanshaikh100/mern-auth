@@ -19,6 +19,9 @@ const userSchema = new mongoose.Schema({
     maxLength: 10,
     required: [true, "Password required."],
   },
+  imageCover: {
+    type: String,
+  },
 });
 
 const User = mongoose.model("User", userSchema);

@@ -27,6 +27,9 @@ export const AuthProvider = ({ children }) => {
         method: "POST",
         url: "http://localhost:4000/api/v1/signup",
         data: userData, // Send userData directly
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
         withCredentials: true, // Place withCredentials at the top level
       });
 

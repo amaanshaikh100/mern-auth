@@ -7,13 +7,15 @@ const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [imageCover, setImageCover] = useState("");
+
   const navigate = useNavigate();
 
   const { signup } = useAuth();
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    await signup({ username, email, password });
+    await signup({ username, email, password, imageCover });
 
     setUsername("");
     setEmail("");
@@ -42,6 +44,11 @@ const Signup = () => {
           placeholder="Password"
           type="text"
           value={password}
+        />
+        <input
+          type="file"
+          placeholder="Upload file"
+          onChange={(e) => setImageCover(e.target.files[0])}
         />
 
         <button onClick={handleSignup}>Submit</button>

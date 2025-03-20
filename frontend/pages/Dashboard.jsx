@@ -15,9 +15,11 @@ const Dashboard = () => {
   return (
     <div>
       <h1>Dashboard</h1>
-
+      <img
+        src={`http://localhost:4000/${user.imageCover.replace(/\\/g, "/")}`}
+        alt="user profile"
+      />
       <h2>Welcome {user.username}</h2>
-
       <a onClick={handleLogout} href="">
         {user ? "Logout" : ""}
       </a>
