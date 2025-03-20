@@ -1,4 +1,5 @@
 import Dashboard from "../pages/Dashboard";
+import Home from "../pages/Home";
 import ProtectedRoute from "../pages/ProtectedRoute";
 import Signup from "../pages/Signup";
 import { Routes, Route } from "react-router-dom";
